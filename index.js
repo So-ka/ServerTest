@@ -21,8 +21,8 @@ app.post("/set-cookie", (req, res) => {
   res.cookie("myCookie", "hello world", {
     maxAge: 900000, // Expires after 15 minutes
     httpOnly: true, // Cookie accessible only through HTTP(S)
-    sameSite: "None", // Allows cross-site requests
-    secure: true, // Requires HTTPS connection
+    //sameSite: "None", // Allows cross-site requests
+    //secure: true, // Requires HTTPS connection
   });
 
   res.send("Cookie set successfully");
