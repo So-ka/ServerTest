@@ -15,7 +15,8 @@ app.use(
 );
 
 // Route to set a cookie
-app.get("/set-cookie", (req, res) => {
+app.post("/set-cookie", (req, res) => {
+  console.log("called");
   // Set a cookie named 'myCookie' with value 'hello world'
   res.cookie("myCookie", "hello world", {
     maxAge: 900000, // Expires after 15 minutes
@@ -40,7 +41,7 @@ app.get("/get-cookie", (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
